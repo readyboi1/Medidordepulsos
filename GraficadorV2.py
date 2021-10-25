@@ -21,10 +21,10 @@ while True:
     x.append(datetime.now())
     y.append(data.decode())
     datos=data.decode()
+    #grafi almacena los datos que necesitas,solo enteros, mientras que basura, es como dice
+    #Solo almacena la parte "\r\n" del string generado por linea
     grafi,basura=datos.split("\r\n")
-    print(grafi)
-    #print(basura)
-    
+      
     plt.scatter(datetime.now(),grafi)
     #plt.scatter(datetime.now(),float(data.decode()))
     plt.show()

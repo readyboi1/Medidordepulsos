@@ -23,6 +23,7 @@ def grafica(frame):
     x_data.append(datetime.now()) #En el eje x va a ir el momento en el que leemos el dato
     #Leemos la variable del puerto serial y lo decodificamos en código ascii
     pulsoStr=port.readline().decode('ascii')
+    pulsoStr,basura=pulsoStr.split("\r\n")
     #Hacemos un casteo de un string a int
     pulso=int(pulsoStr)
     #Agregamos el pulso que es un entero al array de los datos del eje 'y'
